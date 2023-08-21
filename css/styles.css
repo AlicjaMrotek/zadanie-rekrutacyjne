@@ -452,7 +452,7 @@ h5 {
     position: unset;
   }
 
-  .spaced {
+  #footer .spaced {
     flex-direction: column;
   }
 
