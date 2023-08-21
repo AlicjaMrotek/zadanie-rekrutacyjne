@@ -27,58 +27,54 @@
     <!-- Personal CSS -->
     <link rel="stylesheet" href="css/styles.css">
 
-
-
-
 </head>
 
 <body>
     <section id="header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light bg-light">
+            <div class="container-fluid d-flex spaced">
                 <a class="navbar-brand" href="#"><img src="images/logo.svg"></a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="d-flex">
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link active dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Oferta
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#offer">Zobacz naszą ofertę</a></li>
-                                    <li><a class="dropdown-item" href="#">Zapytaj o wycenę</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#firm">O firmie</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#projects">Realizacje</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="#contact">Kontakt</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link active" role="button" href="#" onclick="searchFunction()"><i
-                                        class="fa-solid fa-magnifying-glass"></i></a>
-                                <div id="searchDropdown" class="dropdown-content">
-                                    <input type="text" placeholder="Search..." id="searchInput">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+
+                <div class="flex-end collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Oferta
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#offer">Zobacz naszą ofertę</a></li>
+                                <li><a class="dropdown-item" href="#">Zapytaj o wycenę</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#firm">O firmie</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#projects">Realizacje</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#contact">Kontakt</a>
+                        </li>
+                        <li class="nav-item dropdown search-bar">
+                            <a class="nav-link active" role="button" href="#" onclick="searchFunction()"><i
+                                    class="fa-solid fa-magnifying-glass"></i></a>
+                            <div id="searchDropdown" class="dropdown-content search-field">
+                                <input type="text" placeholder="Search..." id="searchInput">
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </section>
 
-    <!-- tutaj -->
     <section id="intro">
         <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
@@ -198,9 +194,8 @@
         </div>
     </section>
 
-    <!-- tutaj -->
     <section id="firm">
-        <div class="intro-section dark-section centered">
+        <div class="intro-section dark-section spaced">
             <div class="intro-pic" style="background-image: url(images/Background2.png)">
             </div>
             <div class="intro-text container-fluid">
@@ -262,19 +257,18 @@
                         class="fa-solid fa-xmark"></i></i></button>
             </div>
 
-
             <!-- Obrazki w podglądzie są tymi samymi co miniaturki w galerii, bo nie dysponowałam zdjęciami w pełnej rozdzielczości -->
             <div id="previewPhoto" class="preview hide">
                 <div class="picture"><img id="selectedPhoto"></div>
                 <button class="rounded-button floating-button btn btn-outline-light" onclick="closePreview()">Zamknij <i
                         class="fa-solid fa-xmark"></i></button>
             </div>
-
+            
     </section>
 
     <section id="contact">
         <div class="container-fluid">
-            <div class="container-fluid dark-section centered spaced">
+            <div class="container-fluid dark-section spaced">
                 <div>
                     <h3>Zostańmy w kontakcie!</h3>
                     <h3>Znajdziesz nas na <span class="italic">Instagramie</span></h3>
@@ -313,7 +307,7 @@
             </div>
             <div class="spaced copyrights">
                 <p>Prawa zastrzeżone © 2022</p>
-                <div class="gaped">
+                <div class="gaped2">
                     <p>made by</p><img src="images/logo-full-light.png">
                 </div>
 

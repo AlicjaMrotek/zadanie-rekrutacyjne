@@ -3,16 +3,6 @@ html {
   font-size: 16px;
 }
 
-@media all and (max-width: 960px) {
-  html {
-    font-size: 10px;
-  }
-
-  /* .intro-pic {
-    background-size: 62.5%;
-  } */
-}
-
 body {
   font-family: "Inter", sans-serif;
   color: #111111;
@@ -25,7 +15,6 @@ a {
 
 a:hover {
   color: inherit;
-  /* text-decoration: none; */
   opacity: 50%;
 }
 
@@ -75,7 +64,7 @@ h5 {
   padding-bottom: 1rem;
 }
 
-/* CONTAINERS */
+/* CLASS SELECTORS - CONTAINERS */
 
 .dark-section {
   background-color: #1b5b31;
@@ -102,7 +91,7 @@ h5 {
   border-radius: 1.5rem;
 }
 
-.intro-section {  
+.intro-section {
   height: 43rem;
   max-height: 50rem;
   width: 100%;
@@ -130,14 +119,14 @@ h5 {
   overflow: hidden;
 }
 
-.centered {
-  display: flex;
-  align-items: center;
-}
-
 .spaced {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.flex-end {
+  justify-content: flex-end;
 }
 
 .inlined {
@@ -147,6 +136,12 @@ h5 {
 .gaped {
   display: flex;
   gap: 3rem;
+  align-items: center;
+}
+
+.gaped2 {
+  display: flex;
+  gap: 0.5rem;
   align-items: center;
 }
 
@@ -163,15 +158,7 @@ h5 {
   left: 0;
 }
 
-.floating-button {
-  position: absolute;
-  bottom: 3rem;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-
 .preview {
-  /* display: block; */
   position: fixed;
   z-index: 1;
   padding-top: 6.25rem;
@@ -190,12 +177,7 @@ h5 {
   transform: translate(-50%, -40%);
 }
 
-.picture img {
-  height: 37.5rem;
-  width: auto;
-}
-
-/* CLASS SELECTORS */
+/* CLASS SELECTORS by type*/
 
 .bold {
   font-weight: bold;
@@ -210,12 +192,34 @@ h5 {
   font-size: 0.85rem;
 }
 
+.floating-button {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
 .rounded-button {
   border-radius: 3.13rem;
   padding: 0.5rem 1rem;
 }
 
-/* ID SELECTORS */
+.personal-button-carousel {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  background-color: #f5f0ec;
+  width: 4.75rem;
+  height: 4.75rem;
+  opacity: 1;
+}
+
+.picture img {
+  height: 37.5rem;
+  width: auto;
+}
+
+/* ID SELECTORS by order */
 
 #header .container-fluid {
   padding: 1rem 5.75rem;
@@ -298,11 +302,11 @@ h5 {
   box-sizing: border-box;
   padding: 5% 10%;
   border: none;
-  border-bottom: 1px solid #f5f0ec;
+  outline: 2px solid #f5f0ec;
 }
 
 #searchInput:focus {
-  outline: 3px solid #f5f0ec;
+  outline: 3px solid #dcc1ab;
 }
 
 #contact p {
@@ -344,7 +348,7 @@ h5 {
   display: none;
 }
 
-/* MASONRY */
+/* MASONRY GALLERY */
 
 .grid {
   width: 100%;
@@ -367,7 +371,13 @@ h5 {
   padding: 1rem 0;
   margin-bottom: 3.5%;
   background-repeat: no-repeat;
-  background-size: 110%;
+  background-size: cover;
+  transition: filter 0.33s ease-in-out;
+}
+
+.grid-item:hover {
+  -webkit-filter: grayscale(100%); 
+
 }
 
 .grid-item--height2 {
@@ -380,7 +390,7 @@ h5 {
   width: 3.5%;
 }
 
-/* Bootstrap corrections */
+/* Bootstrap class corrections */
 
 .btn-outline-dark:hover {
   border-color: #1b5b31;
@@ -410,12 +420,43 @@ h5 {
   left: auto;
 }
 
-.personal-button-carousel {
-  position: absolute;
-  top: auto;
-  bottom: 0;
-  background-color: #f5f0ec;
-  width: 4.75rem;
-  height: 4.75rem;
-  opacity: 1;
+/* Responsivity */
+
+@media all and (max-width: 960px) {
+  html {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  .search-bar {
+    position: relative;
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  .search-field {
+    left: 0;
+    right: auto;
+    width: 9rem;
+    position: unset;
+  }
+
+  .spaced {
+    flex-direction: column;
+  }
+
+  #footer .svg {
+    margin-bottom: 1.75rem;
+  }
 }
