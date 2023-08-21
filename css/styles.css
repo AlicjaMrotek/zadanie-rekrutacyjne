@@ -1,13 +1,26 @@
 /* TAG SELECTORS */
+html {
+  font-size: 16px;
+}
+
+@media all and (max-width: 960px) {
+  html {
+    font-size: 10px;
+  }
+
+  /* .intro-pic {
+    background-size: 62.5%;
+  } */
+}
+
 body {
   font-family: "Inter", sans-serif;
   color: #111111;
 }
 
 a {
-  color:#f5f0ec;
+  color: #f5f0ec;
   text-decoration: none;
-
 }
 
 a:hover {
@@ -17,12 +30,11 @@ a:hover {
 }
 
 hr {
-  margin: 75px 0;
+  margin: 4.75rem 0;
   border-top: 3px solid #f5f0ec;
 }
 
 p {
-  font-size: 16px;
   line-height: 1.75rem;
   padding-bottom: 30px;
 }
@@ -36,33 +48,32 @@ h5 {
 }
 
 h1 {
-  font-size: 60px;
-  padding-bottom: 30px;
+  font-size: 3.75rem;
+  padding-bottom: 2rem;
   font-weight: 600;
 }
 
 h2 {
-  font-size: 48px;
-  padding-bottom: 24px;
+  font-size: 3rem;
+  padding-bottom: 1.5rem;
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 h4 {
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 600;
   letter-spacing: -10%;
 }
 
 h5 {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #1b5b31;
   letter-spacing: -5%;
-  padding-bottom: 15px;
+  padding-bottom: 1rem;
 }
-
 
 /* CONTAINERS */
 
@@ -80,25 +91,42 @@ h5 {
 }
 
 .container-fluid {
-  padding: 120px 90px;
+  padding: 10% 7%;
   position: relative;
 }
 
 .card-boxes {
-  margin: 15px auto;
-  padding: 25px;
+  margin: 5% auto;
+  padding: 7%;
   border: none;
-  border-radius: 25px;
+  border-radius: 1.5rem;
+}
+
+.intro-section {  
+  height: 43rem;
+  max-height: 50rem;
+  width: 100%;
+}
+
+.intro-text {
+  width: 65%;
+}
+
+.intro-pic {
+  width: 35%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .gallery {
-  padding-bottom: 100px;
+  padding-bottom: 6.25rem;
   margin: 0;
   position: relative;
 }
 
 .gallery-hidden {
-  height: 1600px;
+  height: 100rem;
   overflow: hidden;
 }
 
@@ -118,9 +146,8 @@ h5 {
 
 .gaped {
   display: flex;
-  gap: 50px;
+  gap: 3rem;
   align-items: center;
-
 }
 
 .gradient {
@@ -132,13 +159,13 @@ h5 {
   position: absolute;
   height: 1000px;
   width: 100%;
-  top: 600px;
+  top: 37.5rem;
   left: 0;
 }
 
 .floating-button {
   position: absolute;
-  bottom: 50px;
+  bottom: 3rem;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -147,7 +174,7 @@ h5 {
   /* display: block; */
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 6.25rem;
   left: 0;
   top: 0;
   width: 100%;
@@ -164,7 +191,7 @@ h5 {
 }
 
 .picture img {
-  height: 600px;
+  height: 37.5rem;
   width: auto;
 }
 
@@ -180,30 +207,28 @@ h5 {
 }
 
 .p-small {
-  font-size: 14px;
+  font-size: 0.85rem;
 }
 
 .rounded-button {
-  border-radius: 50px;
+  border-radius: 3.13rem;
   padding: 0.5rem 1rem;
 }
-
-
 
 /* ID SELECTORS */
 
 #header .container-fluid {
-  padding: 15px 90px;
+  padding: 1rem 5.75rem;
   position: relative;
 }
 
 #intro .btn {
-  margin-right: 25px;
-  margin-bottom: 25px;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 #intro img {
-  max-height: 690px;
+  max-height: 43rem;
   width: auto;
 }
 
@@ -233,7 +258,7 @@ h5 {
 }
 
 #offer .svg {
-  padding-bottom: 30px;
+  padding-bottom: 2rem;
 }
 
 #offer .svg:hover {
@@ -242,7 +267,7 @@ h5 {
 }
 
 #projects .container-fluid {
-  padding-bottom: 70px;
+  padding-bottom: 4.5rem;
   position: relative;
 }
 
@@ -256,14 +281,13 @@ h5 {
 }
 
 #footer p {
-  padding-bottom: 0px;
-  margin-bottom: 0px;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 #footer .container-fluid {
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
-
 
 #footer .svg {
   filter: invert(92%) sepia(5%) saturate(397%) hue-rotate(324deg)
@@ -282,7 +306,7 @@ h5 {
 }
 
 #contact p {
-  padding-bottom: 5px;
+  padding-bottom: 0.5rem;
 }
 
 /* SEARCH */
@@ -296,7 +320,7 @@ h5 {
   display: none;
   position: absolute;
   background-color: #f6f6f6;
-  min-width: 150px;
+  min-width: 9rem;
   border: 1px solid #ddd;
   right: 0;
   text-align: right;
@@ -304,12 +328,12 @@ h5 {
 }
 
 .copyrights {
-  margin: 50px auto 0;
-  padding-bottom: 15px;
+  margin: 3rem auto 0;
+  padding-bottom: 1rem;
 }
 
 .copyrights img {
-  height: 24px;
+  height: 1.5rem;
 }
 
 .show {
@@ -338,19 +362,19 @@ h5 {
 }
 
 .grid-item {
-  height: 340px;
+  height: 21.25rem;
   float: left;
-  padding: 15px 0;
+  padding: 1rem 0;
   margin-bottom: 3.5%;
   background-repeat: no-repeat;
   background-size: 110%;
 }
 
 .grid-item--height2 {
-  height: 450px;
+  height: 28rem;
 }
 .grid-item--height3 {
-  height: 600px;
+  height: 37.5rem;
 }
 .gutter-sizer {
   width: 3.5%;
@@ -382,7 +406,7 @@ h5 {
 }
 
 .carousel-control-prev {
-  right: 75px;
+  right: 4.75rem;
   left: auto;
 }
 
@@ -391,7 +415,7 @@ h5 {
   top: auto;
   bottom: 0;
   background-color: #f5f0ec;
-  width: 75px;
-  height: 75px;
+  width: 4.75rem;
+  height: 4.75rem;
   opacity: 1;
 }
